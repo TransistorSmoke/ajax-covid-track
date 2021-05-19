@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700;800&display=swap');
+// font-family: 'Bebas Neue', cursive;
+html, 
+body,
+h2,
+h3,
+h4,
+h5,
+div,
+p,
+span,
+ul,
+li {
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    font-family: 'Inconsolata', monospace;    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+
+.container {        
+    .header-title {
+        text-align: center;
+        font-size: 6rem;
+        letter-spacing: 3px;
+        margin: 50px 0 0 0;  
+        text-transform: uppercase;     
+                       
+        @media screen and (max-width: 600px) {
+            font-size: 4rem;
+            line-height: 55px;
+        }
+    }
+
+    .data-span {         
+        text-align: center;
+        margin : 24px 0;
+
+        span {
+            // font-weight: bold;
+            font-style: italic;
+            color: rgb(89, 89, 89);
+            text-decoration: underline;
+        }
+    }
+
+    .select-state {        
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin: 24px 0;
+    }
+
+    .options-states {        
+        margin: 0 auto;
+        padding: 0 24px;
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: flex-start;  
+        
+        @media screen and (max-width: 600px) {
+            justify-content: center;
+        }
+        
+        div[class*="state-"]{  
+            text-align: center;                  
+            padding: 8px 12px;
+            margin: 8px 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 24px; 
+            border: 1px solid rgb(212, 212, 212); 
+            
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.show-all,
+            &.clear-all {
+                margin-left: 24px;
+                background-color: rgb(233, 233, 233);
+            }
+
+            &.show-all:hover {
+                background-color: rgb(226, 255, 234);
+                color: black;
+            }
+            &.clear-all:hover {
+                background-color: rgb(255, 174, 174);
+            }
+        }
+
+        div[class*="state-"]:hover,
+        .selected {
+            color: white;
+            background-color: rgb(0, 136, 255);
+            box-shadow: -2px 3px 12px -7px #000000;
+        }
+
+    }
+        
+    .container-state {        
+        margin: 48px auto;
+        
+        display: block;
+        text-align: center;
+
+        .state-name {
+            width: 100%;
+            text-align: center;
+        }
+        .day-data {
+            display: inline-block;
+            border: 1px solid grey;
+            width: 275px; 
+            border-radius: 8px;
+            margin-bottom: 8px;
+            padding-bottom: 16px;
+
+            @media screen and (max-width: 600px) {
+                margin: 4px 0;
+            }
+            
+            
+            &-date {
+                font-family: 'Inconsolata', monospace;
+                text-align: center;      
+                font-size: 1.25rem;          
+                padding: 12px;
+                border-radius: 8px 8px 0 0;
+                background-color: rgb(219, 219, 219);
+            }
+
+            &-list-block {                                
+                display: flex;                
+                flex-direction: column;
+                width: 100%;
+                list-style-type: none;
+                margin-top: 12px;
+
+                &:first-child {
+                    padding-top: 8px;
+                }
+
+                
+                li {
+                    display: flex;
+
+                    & > * {
+                        padding: 2px 6px;
+                    }
+
+                    .list-label {
+                        width: 60%;
+                        text-align: right;
+                    }
+                    .list-data {
+                        width: 100%;
+                        padding-left: 12px;
+                    }
+                }
+            }
+        }
+
+        .state-name {
+            h1 {
+                text-align: center;
+                letter-spacing: 2px; 
+                margin-bottom: 8px; 
+                
+                @media screen and (max-width: 600px) {
+                    font-size: 1.75rem;
+                }
+            }
+
+        }
+
+        .list-data {
+            list-style-type: none;
+            display: inline-block;            
+            text-align: left;
+            margin: 0;
+            padding: 0;            
+
+            li {
+                margin: 0;
+                padding: 0 6px;
+            }
+        }
+    }
+}
+
